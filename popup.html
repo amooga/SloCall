@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SloCall</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>SloCall</h1>
+      <div class="stats">
+        <div id="total-requests">Total API Calls: <span>0</span></div>
+      </div>
+    </header>
+
+    <div class="call-list-container">
+      <div class="call-navigation">
+        <button id="prev-call" disabled>&lt; Previous</button>
+        <span id="call-index">Call 0 of 0</span>
+        <button id="next-call" disabled>Next &gt;</button>
+      </div>
+      
+      <div id="no-calls-message" class="hidden">
+        <p>No API calls detected yet. Browse the website to capture API calls.</p>
+      </div>
+      
+      <div id="api-calls-container" class="hidden">
+        <div class="api-call-detail">
+          <h2>Slowest API Call</h2>
+          <div class="response-time-container">
+            <div class="label">Response Time:</div>
+            <div id="response-time" class="value">0ms</div>
+          </div>
+          <div class="status-container">
+            <div class="label">Status:</div>
+            <div id="status-code" class="value">200</div>
+          </div>
+          <div class="method-container">
+            <div class="label">Method:</div>
+            <div id="http-method" class="value">GET</div>
+          </div>
+          <div class="url-container">
+            <div class="label">URL:</div>
+            <div class="value-wrapper">
+              <div id="api-url" class="value">-</div>
+            </div>
+          </div>
+          
+          <div class="url-container">
+            <div class="label">Copy URL:</div>
+            <div class="value-wrapper">
+              <button class="copy-btn" onclick="copyToClipboard('api-url')">
+                Click Me: 📋
+              </button>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="refresh-btn">Refresh Data</button>
+    </div>
+
+    <footer>
+      <p>Click "Refresh Data" to update with the latest API calls</p>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

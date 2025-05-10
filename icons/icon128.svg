@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <g fill="none" fill-rule="evenodd">
+    <rect width="128" height="128" fill="#3498DB" rx="16"/>
+    <rect width="84" height="64" x="22" y="32" fill="#FFF" rx="8"/>
+    <path fill="#3498DB" d="M36,48 L92,48 L92,56 L36,56 L36,48 Z M36,62 L92,62 L92,70 L36,70 L36,62 Z M36,76 L72,76 L72,84 L36,84 L36,76 Z"/>
+    <path fill="#E74C3C" stroke="#FFF" stroke-width="4" d="M98,22 C103.522847,22 108,26.4771525 108,32 C108,37.5228475 103.522847,42 98,42 C92.4771525,42 88,37.5228475 88,32 C88,26.4771525 92.4771525,22 98,22 Z"/>
+    <path fill="#FFF" d="M97,28 L99,28 L99,31 L102,31 L102,33 L99,33 L99,36 L97,36 L97,33 L94,33 L94,31 L97,31 L97,28 Z"/>
+  </g>
+</svg>

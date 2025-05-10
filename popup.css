@@ -1,0 +1,327 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap');
+
+body {
+  font-family: 'Comic Neue', cursive;
+  background-color: #ffffff;
+  width: 400px;
+  height: 500px;
+  overflow-y: auto;
+}
+
+.container {
+  padding: 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+header {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0f0f0;
+  position: relative;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 8px;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1px;
+}
+
+.stats {
+  font-size: 14px;
+  color: #666;
+  font-weight: bold;
+}
+
+/* Call List Container */
+.call-list-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.call-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+#call-index {
+  font-size: 14px;
+  color: #444;
+  font-weight: bold;
+  padding: 4px 12px;
+}
+
+/* API Call Detail */
+.api-call-detail {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+  position: relative;
+  overflow: hidden;
+}
+
+.api-call-detail h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 0.5px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.response-time-container, 
+.status-container, 
+.method-container,
+.url-container {
+  display: flex;
+  margin-bottom: 12px;
+  background: #f9f9f9;
+  padding: 8px;
+  border-radius: 4px;
+  border-left: 2px solid #e0e0e0;
+}
+
+.label {
+  width: 100px;
+  font-weight: 600;
+  color: #555;
+  position: relative;
+  padding-right: 10px;
+}
+
+.label:after {
+  content: ":";
+  position: absolute;
+  right: 0;
+  color: #777;
+}
+
+.value {
+  flex: 1;
+  word-break: break-all;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+#response-time {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 0 5px;
+  border-radius: 4px;
+}
+
+#status-code {
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 0 5px;
+}
+
+#api-url {
+  color: #7b1fa2;
+}
+
+.copy-btn {
+  background: #f1f1f1;
+  color: #555;
+  border: none;
+  border-radius: 4px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 8px;
+  transition: all 0.2s;
+}
+
+.copy-btn:hover {
+  background: #e0e0e0;
+}
+
+.url-container .value-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 80px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -40px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+  font-family: 'Comic Neue', cursive;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Buttons */
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Comic Neue', cursive;
+  font-weight: bold;
+  transition: all 0.2s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.actions {
+  margin-top: auto;
+  text-align: center;
+}
+
+#refresh-btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #2196f3;
+}
+
+#refresh-btn:hover {
+  background-color: #1976d2;
+}
+
+#prev-call, #next-call {
+  font-family: 'Comic Neue', cursive;
+  padding: 6px 12px;
+}
+
+#prev-call:before {
+  content: "←";
+  margin-right: 5px;
+}
+
+#next-call:after {
+  content: "→";
+  margin-left: 5px;
+}
+
+/* Footer */
+footer {
+  margin-top: 16px;
+  font-size: 12px;
+  color: #777;
+  text-align: center;
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+  font-style: italic;
+  font-family: 'Comic Neue', cursive;
+}
+
+/* Empty State */
+.hidden {
+  display: none;
+}
+
+#no-calls-message {
+  text-align: center;
+  padding: 30px 20px;
+  color: #666;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  font-size: 14px;
+  font-family: 'Comic Neue', cursive;
+}
+
+#no-calls-message p {
+  position: relative;
+  z-index: 1;
+}
+
+/* Status colors */
+.status-success {
+  color: white;
+  background-color: #4caf50;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Comic Neue', cursive;
+}
+
+.status-warning {
+  color: white;
+  background-color: #ff9800;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Comic Neue', cursive;
+}
+
+.status-error {
+  color: white;
+  background-color: #f44336;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Comic Neue', cursive;
+}
+
+/* Copy animation */
+@keyframes copied {
+  0% { background-color: #4CAF50; }
+  100% { background-color: #ddd; }
+}
+
+.copied {
+  animation: copied 1s ease;
+}
