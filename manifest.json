@@ -5,9 +5,7 @@
   "description": "Monitors and identifies the slowest API calls on webpages",
   "permissions": [
     "webRequest",
-    "webNavigation",
-    "activeTab",
-    "storage"
+    "webNavigation"
   ],
   "host_permissions": [
     "<all_urls>"
